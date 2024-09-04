@@ -1,0 +1,21 @@
+.policy-content {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  h2 i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  

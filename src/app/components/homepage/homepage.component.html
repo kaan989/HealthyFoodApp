@@ -1,0 +1,79 @@
+<div class="container my-5">
+  <!-- Welcome Section -->
+  <div class="text-center mb-5">
+    <h1 class="display-4 font-weight-bold">Welcome to Healthy Food</h1>
+    <p class="lead">Your go-to app for delicious and healthy recipes!</p>
+    <button class="btn btn-success btn-lg mt-3" routerLink="/recipes">Explore Recipes</button>
+  </div>
+
+  <!-- Today's Recommendations -->
+  <section class="recommendations mb-5">
+    <h2 class="mb-4 text-center text-success font-weight-bold">
+      <i class="fas fa-utensils"></i> Today's Recommendations
+    </h2>
+    <div class="row">
+      <div *ngFor="let recipe of recommendedRecipes" class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img [src]="recipe.image" class="card-img-top" alt="{{ recipe.title }}" style="object-fit: cover; height: 200px;">
+          <div class="card-body">
+            <h5 class="card-title">{{ recipe.title }}</h5>
+            <p class="card-text">{{ recipe.description | slice:0:100 }}...</p>
+            <a [routerLink]="['/recipe-detail', recipe.id]" class="btn btn-outline-success btn-block">View Recipe</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Benefits of Healthy Eating -->
+<!-- Benefits of Healthy Eating -->
+<section class="health-benefits mb-5">
+  <h2 class="mb-4 text-center text-info font-weight-bold">
+    <i class="fas fa-heartbeat"></i> Benefits of Healthy Eating
+  </h2>
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let benefit of healthBenefits" class="col-md-4 mb-3">
+        <div class="d-flex align-items-center">
+          <i class="fas fa-check-circle text-success me-2"></i>
+          <span>{{ benefit }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- App Features -->
+  <section class="app-features mb-5">
+    <h2 class="mb-4 text-center text-primary font-weight-bold">
+      <i class="fas fa-mobile-alt"></i> App Features
+    </h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-search fa-3x text-success mb-3"></i>
+        <h5>Search Recipes</h5>
+        <p>Easily find the perfect recipe using our advanced search functionality.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-chart-line fa-3x text-info mb-3"></i>
+        <h5>Track Your Progress</h5>
+        <p>Monitor your health journey with personalized meal plans and tracking.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-users fa-3x text-primary mb-3"></i>
+        <h5>Community Support</h5>
+        <p>Join a vibrant community of health-conscious individuals and share tips and recipes.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- App Promotion -->
+  <section *ngIf="!isAuthenticated" class="app-promotion text-center">
+    <h2 class="mb-4 text-primary font-weight-bold">
+      <i class="fas fa-star"></i> Why Choose Healthy Food?
+    </h2>
+    <p class="lead">Our app offers a wide variety of healthy recipes tailored to your needs. Whether you're looking to lose weight, gain energy, or simply maintain a balanced diet, Healthy Food has got you covered.</p>
+    <p class="lead">Start your journey to a healthier you with our easy-to-follow recipes and personalized meal plans!</p>
+    <button class="btn btn-outline-primary btn-lg mt-3" routerLink="/register">Join Us Now</button>
+  </section>
+</div>

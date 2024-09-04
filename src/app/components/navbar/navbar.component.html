@@ -1,0 +1,18 @@
+<nav *ngIf="showNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" (click)="onHome()">Healthy Food</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" (click)="onAllRecipe()" aria-current="page">All Recipes</a>
+        <a class="nav-link active" (click)="onDinnerRecipes()" aria-current="page">Dinners</a>
+        <a class="nav-link active" (click)="onDessertRecipes()" aria-current="page">Desserts</a>
+        <a class="nav-link active" (click)="onDrinks()" aria-current="page">Drinks</a>
+      </div>
+    </div>
+    <!-- Logout butonunu sadece oturum açmış kullanıcılar için göster -->
+    <button  (click)="logout()" class="btn btn-danger">Logout</button>
+  </div>
+</nav>

@@ -1,0 +1,60 @@
+<div class="container my-5">
+  <h2 class="text-center text-primary mb-4">Add a New Recipe</h2>
+  <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()" class="p-5 shadow-lg rounded" style="background: linear-gradient(135deg, #f5f7fa, #c3cfe2);">
+    
+    <!-- Title Input -->
+    <div class="form-group">
+      <label for="title" class="font-weight-bold">
+        <i class="fas fa-utensils mr-2 text-primary"></i>Title
+      </label>
+      <input id="title" formControlName="title" class="form-control form-control-lg" placeholder="Enter recipe title" />
+    </div>
+
+    <!-- Description Input -->
+    <div class="form-group">
+      <label for="description" class="font-weight-bold">
+        <i class="fas fa-info-circle mr-2 text-primary"></i>Description
+      </label>
+      <textarea id="description" formControlName="description" class="form-control form-control-lg" rows="3" placeholder="Describe the recipe"></textarea>
+    </div>
+
+    <!-- Ingredients Input -->
+    <div class="form-group">
+      <label for="ingredients" class="font-weight-bold">
+        <i class="fas fa-carrot mr-2 text-primary"></i>Ingredients
+      </label>
+      <textarea id="ingredients" formControlName="ingredients" class="form-control form-control-lg" rows="4" placeholder="List all ingredients"></textarea>
+    </div>
+
+    <!-- Instructions Input -->
+    <div class="form-group">
+      <label for="instructions" class="font-weight-bold">
+        <i class="fas fa-list-alt mr-2 text-primary"></i>Instructions
+      </label>
+      <textarea id="instructions" formControlName="instructions" class="form-control form-control-lg" rows="4" placeholder="Step-by-step instructions"></textarea>
+    </div>
+
+    <!-- Image URL Input -->
+    <div class="form-group">
+      <label for="image" class="font-weight-bold">
+        <i class="fas fa-image mr-2 text-primary"></i>Image URL
+      </label>
+      <input id="image" formControlName="image" class="form-control form-control-lg" placeholder="Enter image URL" />
+    </div>
+
+    <!-- Categories Selection -->
+    <div class="form-group">
+      <label for="categories" class="font-weight-bold">
+        <i class="fas fa-tags mr-2 text-primary"></i>Categories
+      </label>
+      <select id="categories" formControlName="categoryIds" class="form-control form-control-lg" multiple>
+        <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+      </select>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary btn-lg btn-block mt-4" [disabled]="!recipeForm.valid">
+      <i class="fas fa-plus-circle mr-2"></i>Add Recipe
+    </button>
+  </form>
+</div>

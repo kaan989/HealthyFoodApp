@@ -1,0 +1,57 @@
+<section class="h-100 gradient-form" style="background-color: #f8f9fa;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-dark shadow-lg">
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
+                <div class="text-center">
+                  <img src="https://cdn-icons-png.flaticon.com/512/5235/5235253.png" 
+                    style="width: 150px;" alt="logo">
+                  <h4 class="mt-1 mb-5 pb-1">Register for Healthy Food</h4>
+                </div>
+
+                <form (ngSubmit)="register()" novalidate>
+                  <p class="text-muted">Create a new account to enjoy our delicious recipes and more!</p>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" id="username" class="form-control" placeholder="Username" [(ngModel)]="newUser.username" name="username" required>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="email" id="email" class="form-control" placeholder="Email" [(ngModel)]="newUser.email" name="email" required>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="password" id="password" class="form-control" placeholder="Password" [(ngModel)]="newUser.password" name="password" required>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password" [(ngModel)]="newUser.confirmPassword" name="confirmPassword" required>
+                  </div>
+
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <button type="submit" class="btn btn-success btn-block fa-lg gradient-custom-2 mb-3">Register</button>
+                  </div>
+
+                  <div class="text-center">
+                    <p class="text-muted">Already have an account? <a href="/login" class="text-success">Login here</a></p>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2" style="background-color: #e9ecef;">
+              <div class="text-dark px-3 py-4 p-md-5 mx-md-4">
+                <h4 class="mb-4">Healthy Food, Happy Life!</h4>
+                <p class="small mb-0">Welcome to the Healthy Food app, where we believe in nourishing both your body and soul. Our platform offers a variety of healthy recipes and tips to help you maintain a balanced diet. Join us and take the first step towards a healthier lifestyle with delicious, nutritious meals. <br>
+                  - Healthy Food Team</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,110 @@
+/* Genel yazı tipleri ve düzen */
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Başlık ve genel görünüm düzenlemeleri */
+  h1, h2 {
+    font-weight: bold;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+    color: #343a40;
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+    color: #6c757d;
+  }
+  
+  /* Kart stilleri */
+  .card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    color: #343a40;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+    color: #6c757d;
+  }
+  
+  /* Buton stilleri */
+  .btn {
+    border-radius: 50px;
+  }
+  
+  .btn-outline-success {
+    color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .btn-block {
+    display: block;
+    width: 100%;
+  }
+  
+  /* Sağlıklı Beslenme Faydaları */
+  .list-group-item {
+    font-size: 1.1rem;
+    color: #495057;
+  }
+  
+  /* Ana renkler */
+  .text-success {
+    color: #28a745 !important;
+  }
+  
+  .text-info {
+    color: #17a2b8 !important;
+  }
+  
+  .text-primary {
+    color: #007bff !important;
+  }
+
+  .app-promotion {
+    background-color: #e9ecef;
+    padding: 2rem;
+    border-radius: .25rem;
+  }
+
+  .health-benefits .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .health-benefits .col-md-4 {
+    flex: 1 1 33%;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+  
+  .health-benefits .d-flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .health-benefits .align-items-center {
+    align-items: center;
+  }
+  
+  .health-benefits i {
+    margin-right: 10px;
+  }

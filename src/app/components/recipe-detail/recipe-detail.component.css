@@ -1,0 +1,30 @@
+.alert {
+    border-radius: 0.5rem;
+  }
+
+  .card-img-top {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .container {
+    max-width: 1140px;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  .btn-close {
+    font-size: 1.25rem;
+  }
+
+  hr {
+    border-top: 2px solid #dee2e6;
+  }

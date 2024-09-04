@@ -1,0 +1,10 @@
+.navbar-nav .nav-link {
+    cursor: pointer; /* Tıklanabilir işaretçi */
+  }
+  
+
+  
+  /* İsteğe bağlı: bağlantılara hover efekti ekleyebilirsiniz */
+  .navbar-nav .nav-link:hover {
+    text-decoration: underline; /* Üzerine gelindiğinde altı çizili görünüm */
+  }

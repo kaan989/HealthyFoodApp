@@ -1,0 +1,29 @@
+<div class="container my-5">
+    <div class="text-center mb-5">
+      <h1 class="display-4 font-weight-bold">About Us</h1>
+      <p class="lead">Learn more about our team and our mission to bring you the best recipes!</p>
+    </div>
+  
+    <section class="team-members">
+      <div class="row">
+        <div *ngFor="let member of teamMembers" class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img [src]="member.image" class="card-img-top" alt="{{ member.name }}" style="object-fit: cover; height: 200px;">
+            <div class="card-body">
+              <h5 class="card-title">{{ member.name }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{ member.role }}</h6>
+              <p class="card-text">{{ member.bio }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="mission-statement mt-5">
+      <div class="text-center">
+        <h2 class="mb-4 text-primary font-weight-bold">Our Mission</h2>
+        <p class="lead">Our mission is to provide you with healthy, delicious recipes that fit your lifestyle. We believe that eating well should be easy, enjoyable, and accessible to everyone.</p>
+      </div>
+    </section>
+  </div>
+  
